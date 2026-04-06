@@ -628,7 +628,7 @@ function tick(ts) {
 
   // Speed up through inter-sentence gaps; normal speed on content lines
   const inGap = lines[currentIdx] && lines[currentIdx].classList.contains('spacer');
-  const effectiveSpeed = inGap ? Math.min(50, speed + 12) : speed;
+  const effectiveSpeed = inGap ? speed + 12 : speed;
   scrollY -= (effectiveSpeed * 3) * dt;
 
   // Stop at last line
